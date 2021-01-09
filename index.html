@@ -183,6 +183,17 @@
             </div>
         </section>
         <hr class="m-0" />
+        <section class="resume-section" id="smallbrain">
+            <div class="resume-section-content">
+                <h2 class="mb-5">Server</h2>
+                <p>This website runs soley off of a locally hosted Raspberry Pi 4 Server called "smallBrain". This is my
+                    smaller and less powerful server, my other being "BIGbrain" of which temporarily runs in Azure and I
+                    use to host game servers and services.<br>
+                    I am working towards getting a proper x86 server running at a later date to run everything off of.
+                </p>
+            </div>
+        </section>
+        <hr class="m-0" />
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -190,6 +201,19 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            var exec = require('child_process').exec, child;
+
+            child = exec('cat *.js bad_file | wc -l',
+                function (error, stdout, stderr) {
+                    console.log('stdout: ' + stdout);
+                    console.log('stderr: ' + stderr);
+                    if (error !== null) {
+                        console.log('exec error: ' + error);
+                    }
+                });
+            child();
+        </script>
 </body>
 
 </html>
